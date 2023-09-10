@@ -76,7 +76,7 @@ class Conversion {
 		con.booktrade(con);
 		list.add(con);
 		tradenumber++;
-		return "Trade Booked\n" + con.view();
+		return "\n" + con.view();
 	}
 	 public void booktrade(Conversion con )
 	{
@@ -89,9 +89,9 @@ class Conversion {
 		}
 		if(getDecision().equalsIgnoreCase("BOOK"))
 		{
-			duplicate2="Trade for USDINR has been booked with rate 66.0.The amount of Rs"+getAmount()*66.0+" will be transferred in 2 working days to"+ getCustomerName();
+			duplicate2="Trade for USDINR has been booked with rate 66.0.The amount of Rs"+getAmount()*66.0+" will be transferred in 2 working days to "+ getCustomerName()+"\nTrade Booked";
 		}else {
-			duplicate2="";
+			duplicate2=""+"Trade Cancelled";
 		}
 	}
 	 public String view()
